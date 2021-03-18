@@ -58,8 +58,14 @@ def rectangle(start, end):
     begin_fill()
 
     for count in range(2):
-        forward(end.x - start.x)
-        left(45)
+        forward(100)
+        left(90)
+        forward(50)
+        left(90)
+        forward(100)
+        left(90)
+        forward(50)
+        left(90)
     end_fill()
 
 
@@ -98,7 +104,7 @@ def store(key, value):
 
 
 state = {'start': None, 'shape': rectangle}
-state = {'start': None, 'shape': triangle}
+#state = {'start': None, 'shape': triangle}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
