@@ -10,7 +10,7 @@ Exercises
 
 """
 
-from turtle import up, setup, onscreenclick
+from turtle import up, setup, onscreenclick, colormode, pencolor
 from turtle import onkey, color, done, goto, down, begin_fill
 from turtle import forward, left, end_fill, listen, undo
 from freegames import vector
@@ -85,7 +85,8 @@ def triangle(start, end):
 def tap(x, y):
     "Store starting point or draw shape."
     start = state['start']
-
+    colormode(255)
+    pencolor(255, 0, 0)
     if start is None:
         state['start'] = vector(x, y)
     else:
@@ -100,7 +101,7 @@ def store(key, value):
     state[key] = value
 
 
-state = {'start': None, 'shape': rectangle}
+state = {'start': None, 'shape': square}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
