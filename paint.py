@@ -39,7 +39,15 @@ def square(start, end):
 
 def circle(start, end):
     "Draw circle from start to end."
-    pass #PASS
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(18):
+        forward(end.x - start.x)
+        left(20)
+    end_fill()
 
 
 def rectangle(start, end):
@@ -68,7 +76,7 @@ def triangle(start, end):
 
     for count in range(2):
         forward(end.x - start.x)
-        left(100)
+        left(45)
     end_fill()
 
 
