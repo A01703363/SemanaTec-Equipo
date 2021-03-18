@@ -39,11 +39,16 @@ def square(start, end):
 
 def circle(start, end):
     "Draw circle from start to end."
-    pass  # TODO
+    pass #PASS
 
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
+    pass #PASS
+
+
+def triangle(start, end):
+    "Draw triangule from start to end."
     up()
     goto(start.x, start.y)
     down()
@@ -54,10 +59,6 @@ def rectangle(start, end):
         left(100)
     end_fill()
 
-
-def triangle(start, end):
-    "Draw triangle from start to end."
-    pass  # TODO
 
 
 def tap(x, y):
@@ -78,7 +79,7 @@ def store(key, value):
     state[key] = value
 
 
-state = {'start': None, 'shape': rectangle}
+state = {'start': None, 'shape': triangle}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
