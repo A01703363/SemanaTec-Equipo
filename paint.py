@@ -44,7 +44,15 @@ def circle(start, end):
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(2):
+        forward(end.x - start.x)
+        left(100)
+    end_fill()
 
 
 def triangle(start, end):
@@ -70,7 +78,7 @@ def store(key, value):
     state[key] = value
 
 
-state = {'start': None, 'shape': line}
+state = {'start': None, 'shape': rectangle}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
