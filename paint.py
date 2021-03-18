@@ -69,7 +69,6 @@ def rectangle(start, end):
     end_fill()
 
 
-
 def triangle(start, end):
     "Draw triangule from start to end."
     up()
@@ -81,7 +80,6 @@ def triangle(start, end):
         forward(end.x - start.x)
         left(100)
     end_fill()
-
 
 
 def tap(x, y):
@@ -102,9 +100,7 @@ def store(key, value):
     state[key] = value
 
 
-
 state = {'start': None, 'shape': rectangle}
-#state = {'start': None, 'shape': triangle}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
