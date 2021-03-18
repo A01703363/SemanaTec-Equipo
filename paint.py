@@ -58,8 +58,14 @@ def rectangle(start, end):
     begin_fill()
 
     for count in range(2):
-        forward(end.x - start.x)
-        left(45)
+        forward(100)
+        left(90)
+        forward(50)
+        left(90)
+        forward(100)
+        left(90)
+        forward(50)
+        left(90)
     end_fill()
 
 
@@ -72,9 +78,8 @@ def triangle(start, end):
 
     for count in range(2):
         forward(end.x - start.x)
-        left(45)
+        left(100)
     end_fill()
-
 
 
 def tap(x, y):
