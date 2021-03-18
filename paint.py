@@ -39,7 +39,15 @@ def square(start, end):
 
 def circle(start, end):
     "Draw circle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(18):
+        forward(end.x - start.x)
+        left(20)
+    end_fill()
 
 
 def rectangle(start, end):
@@ -48,8 +56,17 @@ def rectangle(start, end):
 
 
 def triangle(start, end):
-    "Draw triangle from start to end."
-    pass  # TODO
+    "Draw triangule from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(2):
+        forward(end.x - start.x)
+        left(60)
+    end_fill()
+
 
 
 def tap(x, y):
@@ -70,7 +87,7 @@ def store(key, value):
     state[key] = value
 
 
-state = {'start': None, 'shape': line}
+state = {'start': None, 'shape': circle}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
