@@ -52,6 +52,6 @@ for i in range(len(notes)):
     new_note = note.Note(notes[i])
     if(i not in cuartos):
         new_note.duration.quarterLength = 0.5
-        st.append(new_note)
-        st.insert(0, meter.TimeSignature('3/4'))
-st.write('midi', fp="cancion19.mid")
+    st.append(new_note)
+    st.insert(0, meter.TimeSignature('3/4'))
+st.write('midi', fp="cancion22.mid")
