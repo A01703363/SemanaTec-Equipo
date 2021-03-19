@@ -1,14 +1,19 @@
 # Offset + Duration
-from music21 import note, stream, tempo
-notes = ['G', 'E','E', 'E','D', 'C', 'G', 'G', 'F', 'E','E', 'E','D','C','G']
+
+notes  = [ 'C', 'F3', 'G3', 'A3', 'B3', 
+          'C', 'F3', 'F3', 
+          'D', 'B3', 'C', 'D', 'E', 
+          'F', 'F3', 'F3',
+          'B3', 'C', 'B3', 'A3', 'G3', 
+          'A3','B3', 'A3', 'G3', 'F3', 
+          'E3', 'F3', 'G3', 'A3', 'F3',
+          'G3']
 
 st = stream.Stream()
 
 for n in notes:
   new_note = note.Note(n)
-  new_note.duration.quarterLength = 0.5
   st.append(new_note)
 
-st.insert(0,tempo.MetronomeMark(number = 96))
 
-st.write('midi', fp = 'la_primavera_vivaldi.mid')
+st.write('midi', fp="cancion2.mid")
