@@ -1,19 +1,16 @@
 # Offset + Duration
+from music21 import note, stream, meter
 
-notes  = [ 'C', 'F3', 'G3', 'A3', 'B3', 
-          'C', 'F3', 'F3', 
-          'D', 'B3', 'C', 'D', 'E', 
-          'F', 'F3', 'F3',
-          'B3', 'C', 'B3', 'A3', 'G3', 
-          'A3','B3', 'A3', 'G3', 'F3', 
-          'E3', 'F3', 'G3', 'A3', 'F3',
-          'G3']
 
+notes  = ['C5', 'F', 'G', 'A', 'Bb', 'C5', 'F', 'F', 'D5', 'Bb', 
+         'C5', 'D5', 'E5', 'F5', 'F', 'F']
+# Posiciones de las notas que duran 1/4
+cuartos = [0, 5, 6, 7, 8, 13, 14, 15] 
 st = stream.Stream()
-
-for n in notes:
-  new_note = note.Note(n)
+for i in range(len(notes)):
+  new_note = note.Note(notes[i])
+  if(i not in cuartos):
+    new_note.duration.quarterLength = 0.5  
   st.append(new_note)
-
-
-st.write('midi', fp="cancion2.mid")
+  st.insert(0, meter.TimeSignature('3/4'))
+st.write('midi', fp="cancion14.mid")
