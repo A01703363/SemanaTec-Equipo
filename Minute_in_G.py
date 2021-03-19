@@ -31,8 +31,8 @@ notes  = ['C5', 'F', 'G', 'A', 'Bb',
 # Posiciones de las notas que duran 1/4
 cuartos = [0, 5, 6, 7, 8, 13, 14, 15, 16, 21, 
           26, 31, 32, 37, 38, 39, 40, 45, 46, 
-          47, 48, 53, 58, 63, 64, 69, 74, 78,
-          81, 90, 93, 94] 
+          47, 48, 53, 58, 63, 64, 69, 74, 79,
+          82, 91, 94, 95] 
 st = stream.Stream()
 for i in range(len(notes)):
   new_note = note.Note(notes[i])
@@ -40,4 +40,4 @@ for i in range(len(notes)):
     new_note.duration.quarterLength = 0.5  
   st.append(new_note)
   st.insert(0, meter.TimeSignature('3/4'))
-st.write('midi', fp="cancion17.mid")
+st.write('midi', fp="cancion18.mid")
