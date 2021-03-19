@@ -25,7 +25,14 @@ notes  = ['C5', 'F', 'G', 'A', 'Bb',
         'G', 'A', 'Bb', 'C5', 'D5','E5',
         'F5', 'E5', 'D5',
         'E5', 'G', 'Bb', 
-        'C5']
+        'C5',
+        'C5', 'F', 'E', 'F',
+        'D5', 'F', 'E', 'F', 
+        'C5', 'Bb', 'A',
+        'G', 'F', 'E', 'F', 'G',
+        'C', 'D', 'E', 'F', 'G', 'A',
+        'Bb', 'A', 'G',
+        'A', 'C5', 'F', 'E', 'F']
 
 
 # Posiciones de las notas que duran 1/4
@@ -40,4 +47,4 @@ for i in range(len(notes)):
     new_note.duration.quarterLength = 0.5  
   st.append(new_note)
   st.insert(0, meter.TimeSignature('3/4'))
-st.write('midi', fp="cancion18.mid")
+st.write('midi', fp="cancion19.mid")
